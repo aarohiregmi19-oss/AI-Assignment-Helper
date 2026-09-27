@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Assignment Helper</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>🤖 AI Assignment Helper</h1>
+            <p>Create well-structured assignments with AI</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+
+            <h2>📝 Create Your Assignment</h2>
+
+            <div class="form-group">
+                <label for="topic">Assignment Topic</label>
+                <input
+                    type="text"
+                    id="topic"
+                    placeholder="Example: Artificial Intelligence in Education"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Example: Computer Science"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="assignment_type">Assignment Type</label>
+                <select id="assignment_type">
+                    <option value="Essay">Essay</option>
+                    <option value="Report">Report</option>
+                    <option value="Research Paper">Research Paper</option>
+                    <option value="Case Study">Case Study</option>
+                    <option value="Presentation">Presentation Content</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="length">Length</label>
+                <select id="length">
+                    <option value="Short">Short</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Long">Long</option>
+                </select>
+            </div>
+
+            <button id="generateBtn" onclick="generateAssignment()">
+                ✨ Generate Assignment
+            </button>
+
+        </section>
+
+
+        <section class="card result-card">
+
+            <h2>📄 Generated Assignment</h2>
+
+            <div id="loading" class="loading">
+                Generating your assignment...
+            </div>
+
+            <div id="result">
+                Your generated assignment will appear here.
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 AI Assignment Helper</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
